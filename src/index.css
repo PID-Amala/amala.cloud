@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navMenu{
+  @apply text-white bg-primary w-[150px] h-full fixed top-0 transition-all z-10;
+}
+.paddingX{
+  @apply px-[10%];
+}
+.h1{
+  @apply text-[23px] md:text-[36px] font-bold leading-tight;
+}
+.h5{
+  @apply  text-secondary text-[18px] font-bold mb-2;
+}
+.text{
+  @apply text-[#000014] text-[16px] font-normal text-justify leading-loose;
+}
+.a{
+  @apply  hover:text-secondary mb-2;
+}
+.btn{
+  @apply w-[108px] md:w-[182px] text-[14px] md:text-[20px] font-bold;
+}
+
+
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+*/
+
+@font-face {
+  font-family: 'Helvetica-World';
+  src: url('./assets/fonts/Helvetica-World.ttf') format('ttf');
+       font-display: swap;
+}
+@font-face {
+  font-family: 'Helvetica-World';
+  src: url('./assets/fonts/helvetica-world-bold.ttf') format('ttf');
+       font-weight: 700;
+       font-display: swap;
+       font-style: bold;
+}
+@font-face {
+  font-family: 'Helvetica-World';
+  src: url('./assets/fonts/HelveticaWorld-Regular.ttf') format('ttf');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+html,body{
+  @apply font-Helvetica-World;
+}
