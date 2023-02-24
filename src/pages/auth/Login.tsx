@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import FormInput from '../../../components/reusables/FormInput'
-import { LoadingButton } from '../../../components/reusables/LoadingButton'
-import logo from '../../../assets/icons/amala.svg'
-import user from '../../../assets/icons/user.svg'
+import FormInput from '../../components/reusables/FormInput'
+import { LoadingButton } from '../../components/reusables/LoadingButton'
+import logo from '../../assets/icons/amala.svg'
+import user from '../../assets/icons/user.svg'
 
 const Login = () => {
   return (
@@ -14,14 +14,14 @@ const Login = () => {
         <h1 className='h1'>Login</h1>
         <form>
           <FormInput label='Email' name='email'/>
-          <FormInput label='Password' name='password'/>
+          <FormInput label='Password' name='password' type='password'/>
           <div className='text-primary mt-[-10px] mb-4 flex justify-end'><Link to='forgotpassword' className='text-[14px] text-primary font-semibold hover:text-secondary'>Forgot Password?</Link></div>
           <LoadingButton
             loading={false}
           >
             Login
           </LoadingButton>
-          <div className='mt-4 flex justify-center'>New member? <Link  to='/individual/signup' className='text-primary font-semibold hover:text-secondary'> Sign up now</Link></div>
+          <div className='mt-4 flex justify-center'>New member? <Link  to='/signup' className='text-primary font-semibold hover:text-secondary'> Sign up now</Link></div>
         </form>
         
         

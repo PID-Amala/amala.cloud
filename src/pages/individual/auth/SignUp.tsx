@@ -54,7 +54,7 @@ const SignUp = () => {
             >
               Sign Up
             </LoadingButton>
-            <p className='mt-4 w-fit mx-auto'>Already a member? <Link to='/individual/login'><span className="text-primary font-semibold hover:text-secondary">Login</span></Link></p>
+            <p className='mt-4 w-fit mx-auto'>Already a member? <Link to='/login'><span className="text-primary font-semibold hover:text-secondary">Login</span></Link></p>
           </form>
         
       </div>

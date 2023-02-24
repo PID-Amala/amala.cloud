@@ -61,13 +61,13 @@ const  Header = () =>{
       </div>
       
       {/* Desktop Menu */}
-      <nav className='hidden md:block'>
-        <ul className="flex gap-6 text-primary  font-medium">
+      <nav className='hidden md:flex'>
+        <ul className="flex gap-6 items-center text-primary font-medium ">
           {SidebarDatas.map((item, index) => (
             <li key={index}>
               <NavLink
                 to={item.path}
-                className="flex items-center gap-4 h-10 pl-4 mb-4 hover:bg-white hover:text-secondary"
+                className="flex items-center gap-4 h-10 pl-4 hover:bg-white hover:text-secondary"
               >
                 <span>{item.title}</span>
               </NavLink>

@@ -29,7 +29,7 @@ const Home = () => {
         <p className='text-[14px] md:text-[25px] max-w-[800px]'>Link your individual biometric data and personal identifiable information to create one identity for yourself.</p>
         <div className='flex flex-row gap-8'>
           <div className='btn'><Link to="/signup"><Button fullWidth>Sign Up</Button></Link></div>
-          <div className='btn'><Button fullWidth variant ="outlined">Login</Button></div>
+          <div className='btn'><Link to="/login"><Button fullWidth variant ="outlined">Login</Button></Link></div>
         </div>
         <div>
           <img className='w-[90%]' src={gif} alt="Users Verification" />
@@ -53,7 +53,7 @@ const Home = () => {
           <p className='text'>We understand the importance of protecting sensitive information and maintaining the integrity of our clients’ data. 
             This is why we take necessary precautions to ensure the security and confidentiality of our clients’ information.
           </p>
-          <div className='btn'><Button fullWidth>Get API</Button></div>
+          <div className='btn'><a href="/provider/signup"><Button fullWidth>Get API</Button></a></div>
         </div>
         <div>
           <img src={fingerPrint} alt="Fingerprint Verification" className=''/>
@@ -65,7 +65,7 @@ const Home = () => {
           <p className='text'>As an individual, you can: Validate your identity, Control who has access to your 
             personal information & Grant permission or revoke access to these information...
           </p>
-          <div className='btn'><Button fullWidth>Get Started</Button></div>
+          <div className='btn'><a href="/individual/signup"><Button fullWidth>Get Started</Button></a></div>
         </div>
         <div>
           <img src={qrCode} alt="Woman Scan a QR cose with phone"  className=''/>

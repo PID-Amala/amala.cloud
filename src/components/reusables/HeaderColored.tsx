@@ -68,7 +68,7 @@ const  HeaderColored = () =>{
             <li key={index}>
               <NavLink
                 to={item.path}
-                className="flex items-center gap-4 h-10 pl-4 mb-4 hover:text-white"
+                className="flex items-center gap-4 h-10 pl-4 hover:text-white"
               >
                 
                 <span>{item.title}</span>

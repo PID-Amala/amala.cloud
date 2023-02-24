@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../../assets/icons/amala.svg'
-import user from '../../../assets/icons/user.svg'
-import FormInput from '../../../components/reusables/FormInput'
-import { LoadingButton } from '../../../components/reusables/LoadingButton'
+import FormInput from '../../components/reusables/FormInput'
+import { LoadingButton } from '../../components/reusables/LoadingButton'
+import logo from '../../assets/icons/amala.svg'
+import user from '../../assets/icons/user.svg'
 
 
 const ForgotPassword = () => {
@@ -23,7 +23,7 @@ const ForgotPassword = () => {
           >
             Send
           </LoadingButton>
-          <div className='w-fit mx-auto mt-2'>Back to <Link to='/individual/login' className='text-primary font-bold'>Login</Link></div>
+          <div className='w-fit mx-auto mt-2'>Back to <Link to='/login' className='text-primary font-bold'>Login</Link></div>
         </form>
       </div>
     </div>
