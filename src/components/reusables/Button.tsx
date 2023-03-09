@@ -9,13 +9,14 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "outlined" | "contained";
 }
 export const Button = (props: IButton) => {
-  const { children, fullWidth, disabled, success, variant = "contained" } = props;
+  const { children, fullWidth, disabled, success, type, variant = "contained" } = props;
   return (
     <button
+      type={type}
       disabled={disabled}
       {...props}
       className={clsx(
-        "rounded-[10px] py-4 px-4 mt-6 capitalize cursor-pointer transition-all ",
+        "rounded-[10px] py-4 px-4 capitalize cursor-pointer transition-all ",
         {
           "w-full": fullWidth === true,
           "bg-primary  text-white hover:bg-secondary":

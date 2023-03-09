@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navMenu{
-  @apply text-white bg-primary w-[150px] h-full fixed top-0 transition-all z-10;
+  @apply text-white bg-primary w-[200px] h-full fixed top-0 transition-all z-10;
 }
 .paddingX{
   @apply px-[10%];
@@ -21,9 +21,11 @@
   @apply  hover:text-secondary mb-2;
 }
 .btn{
-  @apply w-[108px] md:w-[182px] text-[14px] md:text-[20px] font-bold;
+  @apply w-[130px] md:w-[182px] text-[14px] md:text-[16px];
 }
-
+/* .active {
+  @apply  text-secondary;
+} */
 
 
 /**

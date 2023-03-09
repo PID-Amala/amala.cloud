@@ -19,6 +19,7 @@ export const LoadingButton: React.FC<LoadingButtonProps> = ({
 }) => {
   return (
     <button
+      disabled = {disabled}
       type="submit"
       className={twMerge(
         `w-[107px] md:w-[182px] py-3 rounded-lg outline-none border-none flex justify-center mx-auto hover:bg-secondary`,
@@ -26,12 +27,11 @@ export const LoadingButton: React.FC<LoadingButtonProps> = ({
       )}
     >
       {loading ? (
-        <div className="flex items-center gap-3">
+        <div className="flex items-center">
           <Spinner />
           <span className="text-slate-500 inline-block">Loading...</span>
         </div>
-      ) : disabled ? ( <span className={`${textColor}`}>{children}</span>
-      ): (
+      ) : (
         <span className={`${textColor}`}>{children}</span>
       )}
     </button>

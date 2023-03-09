@@ -10,10 +10,10 @@ const SignUp = () => {
       <Link to='/'><img src={logo} alt="amala logo" className='w-[134px]'/></Link>
       <div className='flex flex-col items-center pt-[100px]'>
         <img src={user} alt="user" />
-        <Link to='/individual/signup'><div className='w-[225px]'><Button fullWidth>As an individual</Button></div></Link>
-        <Link to='/provider/signup'><div className='w-[225px]'><Button fullWidth>As a Service Provider</Button></div></Link>
+        <h1 className='h1 mb-8'>SignUp</h1>
+        <div className='w-[225px] mb-4'><Link to='/individual/signup'><Button fullWidth>As an individual</Button></Link></div>
+        <div className='w-[225px]'><Link to='/provider/signup'><Button fullWidth>As a Service Provider</Button></Link></div>
       </div>
-      
     </div>
   )
 }

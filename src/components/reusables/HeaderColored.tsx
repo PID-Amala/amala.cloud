@@ -3,7 +3,6 @@ import { NavLink, Link } from 'react-router-dom';
 import logo from "../../assets/icons/amala.svg"
 import hamburger from "../../assets/icons/hamburger_icon.svg"
 import closeIcon from '../../assets/icons/close.svg'
-import SidebarDatas from '../datas/SidebarDatas';
 
 const  HeaderColored = () =>{
   const [sidebar, setSidebar] = useState(false);
@@ -46,17 +45,7 @@ const  HeaderColored = () =>{
                 />
               </NavLink>
             </li>
-            {SidebarDatas.map((item, index) => (
-              <li key={index} onClick={showSidebar}>
-                <NavLink
-                  to={item.path}
-                  className="flex items-center gap-4 h-10 pl-4 mb-4 hover:bg-white hover:text-black"
-                >
-                  
-                  <span>{item.title}</span>
-                </NavLink>
-              </li>
-            ))}
+            
           </ul>
         </nav>
       </div>
@@ -64,17 +53,7 @@ const  HeaderColored = () =>{
       {/* Desktop Menu */}
       <nav className='hidden md:block'>
         <ul className="flex gap-6 text-primary  font-medium">
-          {SidebarDatas.map((item, index) => (
-            <li key={index}>
-              <NavLink
-                to={item.path}
-                className="flex items-center gap-4 h-10 pl-4 hover:text-white"
-              >
-                
-                <span>{item.title}</span>
-              </NavLink>
-            </li>
-          ))}
+          
           
         </ul>
       </nav>

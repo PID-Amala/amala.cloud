@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React, {useEffect} from 'react'
 // Zod - A typescript-first schema validation library.
 import { object, string, TypeOf } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,7 +14,6 @@ import logo from '../../../assets/icons/amala.svg'
 import check from '../../../assets/icons/Check.svg'
 import user from '../../../assets/icons/user.svg'
 
-
 //type definition with error messages for the form input
 const emailVerificationSchema = object({
   verificationCode: string().min(1, "Email verifciation code is required"),
@@ -22,7 +21,6 @@ const emailVerificationSchema = object({
 
 //type definition for form
 export type EmailVerificationInput = TypeOf<typeof emailVerificationSchema>;
-
 
 const EmailVerification = () => {
   const store = useStore();
@@ -46,8 +44,7 @@ const EmailVerification = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSubmitSuccessful]);
-  
-  //if there is verification code set the value of the verification input to the verification code
+
   useEffect(() => {
     if (verificationCode) {
       setValue("verificationCode", verificationCode);
@@ -80,7 +77,6 @@ const EmailVerification = () => {
   };
 
   const onSubmitHandler: SubmitHandler<EmailVerificationInput> = (values) => {
-    navigate('/individual/signup/register');
     verifyEmail(values);
   };
 
@@ -89,8 +85,8 @@ const EmailVerification = () => {
       <Link to='/'><img src={logo} alt="amala logo" className='w-[134px]'/></Link>
       <div className='flex flex-col items-center pt-[60px] md:pt-0'>
         <img src={user} alt="user" />
-        <h1 className='h1 mb-2'>Email verification</h1>
-        <p className='max-w-[293px] text-center leading-tight'>Please check your Email, we’ve you sent a mail for verification  </p>
+        <h1 className='h1 mb-2'>Company mail verification</h1>
+        <p className='max-w-[293px] text-center leading-tight'>Please check your comapany mail, we’ve sent you a mail for verification.</p>
         <img src={check} alt="check"/>
         <FormProvider {...methods}>
           <form

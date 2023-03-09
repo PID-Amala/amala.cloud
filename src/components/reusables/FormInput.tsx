@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { useFormContext } from 'react-hook-form';
 import clsx from "clsx";
 
 type FormInputProps = {
@@ -14,7 +14,7 @@ const FormInput: React.FC<FormInputProps> = ({label, name, type = 'text', placeh
   const {
     register,
     formState: { errors },
-  } = useForm();
+  } = useFormContext();
 
   return (
     <div className='mb-3'>
